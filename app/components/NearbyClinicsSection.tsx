@@ -10,7 +10,7 @@ const NEARBY_CLINICS: NearbyClinic[] = [
     distance: "2.5 km",
     time: "40min",
     type: "Rumah Sakit",
-    image: "/images/hospital_main.jpg",
+    image: "/images/hospital_detail.jpg",
   },
   {
     name: "Klinik Tanah Kusir",
