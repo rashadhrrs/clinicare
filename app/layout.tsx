@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="id">
       <body
         className={`${inter.variable} antialiased bg-gray-50 font-sans leading-6`}
+        suppressHydrationWarning
       >
         {children}
       </body>
