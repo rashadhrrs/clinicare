@@ -17,11 +17,8 @@ export default function Avatar({
   className = "",
   backgroundColor = "bg-gray-200",
   textColor = "text-gray-500",
-  //   text,
   src,
 }: AvatarProps) {
-  //   const displayText = text || `${width}×${height}`;
-
   return (
     <Image
       className={`${backgroundColor} ${textColor} flex items-center justify-center text-xs font-medium ${className}`}

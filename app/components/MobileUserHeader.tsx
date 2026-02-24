@@ -1,6 +1,5 @@
-import { Logo } from "./ui/Logo";
+import Image from "next/image";
 import { LogoMobile } from "./ui/LogoMobile";
-import PlaceholderImage from "./ui/PlaceholderImage";
 
 export default function MobileUserHeader() {
   return (
@@ -29,18 +28,16 @@ export default function MobileUserHeader() {
 
       {/* User Info */}
       <div className="flex items-center space-x-3 px-4 pb-5">
-        <PlaceholderImage
+        <Image
           width={46}
           height={46}
           alt="Dita Nirmala"
           className="rounded-full border-2 border-white shrink-0"
-          backgroundColor="bg-teal-200"
-          textColor="text-teal-700"
-          text="DN"
+          src="https://i.pravatar.cc/150?img=60"
         />
         <div>
           <div className="font-semibold text-white text-sm leading-tight">
-            Dita Nirmala
+            Alex Gaskarth
           </div>
           <div className="text-xs text-teal-100 flex items-center mt-1">
             <svg

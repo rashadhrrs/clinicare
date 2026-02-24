@@ -74,7 +74,6 @@ export default function SearchSection() {
         sorted.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case "Terdekat":
-        // Would need location data for proper implementation
         break;
       default:
         break;

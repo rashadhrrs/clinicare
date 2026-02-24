@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PlaceholderImage from "./ui/PlaceholderImage";
 import { Logo } from "./ui/Logo";
 import Avatar from "./ui/Avatar";
 

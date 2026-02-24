@@ -1,4 +1,3 @@
-import PlaceholderImage from "./ui/PlaceholderImage";
 import Button from "./ui/Button";
 import { ChevronRight, Plus, Star } from "lucide-react";
 import Image from "next/image";
@@ -35,76 +34,11 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            {/* Trust Badge */}
-            {/* <div className="flex items-center gap-4 justify-center lg:justify-start">
-              <div className="flex items-center bg-white rounded-lg p-4 shadow-sm border">
-                <div className="flex -space-x-2 mr-3">
-                  <PlaceholderImage
-                    width={32}
-                    height={32}
-                    alt="Customer 1"
-                    className="rounded-full border-2 border-white"
-                    backgroundColor="bg-blue-200"
-                    text="👤"
-                  />
-                  <PlaceholderImage
-                    width={32}
-                    height={32}
-                    alt="Customer 2"
-                    className="rounded-full border-2 border-white"
-                    backgroundColor="bg-green-200"
-                    text="👤"
-                  />
-                  <PlaceholderImage
-                    width={32}
-                    height={32}
-                    alt="Customer 3"
-                    className="rounded-full border-2 border-white"
-                    backgroundColor="bg-purple-200"
-                    text="👤"
-                  />
-                  <div className="w-8 h-8 bg-teal-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                    +
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-gray-800">1400+</div>
-                  <div className="text-xs text-gray-500">Happy Customers</div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-4 shadow-sm border">
-                <div className="flex items-center gap-2">
-                  <div className="flex text-yellow-400">{"★".repeat(5)}</div>
-                  <span className="text-sm font-bold text-gray-800">4.7</span>
-                </div>
-                <div className="text-xs text-gray-500">(67 Reviews)</div>
-              </div>
-            </div> */}
-
-            {/* Easy Appointment Badge */}
-            {/* <div className="mt-6 flex items-center gap-2 justify-center lg:justify-start">
-              <div className="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">★</span>
-              </div>
-              <span className="text-sm text-gray-600">
-                Mudah untuk buat janji
-              </span>
-            </div> */}
           </div>
 
           {/* Right Content - Doctor Image */}
           <div className="flex-1 relative">
             <div className="relative">
-              {/* <PlaceholderImage
-                width={400}
-                height={500}
-                alt="Professional Doctor"
-                className="rounded-2xl shadow-2xl"
-                backgroundColor="bg-gradient-to-br from-teal-100 to-teal-200"
-                textColor="text-teal-600"
-                text="👨‍⚕️ Doctor"
-              /> */}
               <Image
                 src="/images/doctor_image.jpg"
                 alt="Doctor"

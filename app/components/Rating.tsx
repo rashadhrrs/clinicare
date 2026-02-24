@@ -18,10 +18,7 @@ export function Rating({ value, max = 5, className }: RatingProps) {
             return (
               <div key={index} className="relative w-5 h-5">
                 <Star className="absolute w-5 h-5 text-[#F3FBC6]" />
-                <div
-                  className="absolute overflow-hidden"
-                  //   style={{ width: `${decimal * 100}%` }}
-                >
+                <div className="absolute overflow-hidden">
                   <Star className="w-5 h-5 fill-[#F9D800] text-[#F9D800]" />
                 </div>
               </div>
