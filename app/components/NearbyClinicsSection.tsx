@@ -20,7 +20,7 @@ const NEARBY_CLINICS: NearbyClinic[] = [
     distance: "2.5 km",
     time: "40min",
     type: "Klinik",
-    image: "/images/hospital_room.jpg",
+    image: "/images/hospital_detail.jpg",
   },
 ];
 
