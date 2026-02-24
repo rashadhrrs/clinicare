@@ -1,8 +1,7 @@
 import Button from "./ui/Button";
-import { ChevronRight, Plus, Star } from "lucide-react";
+import { ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import Avatar from "./ui/Avatar";
-import { Rating } from "./Rating";
+import FloatingRatingCard from "./hero/FloatingRatingCard";
 
 export default function HeroSection() {
   return (
@@ -33,7 +32,6 @@ export default function HeroSection() {
                 </span>
               </Button>
             </div>
-
           </div>
 
           {/* Right Content - Doctor Image */}
@@ -55,55 +53,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating Rating Card */}
-              <div className="absolute bottom-40 left-105 bg-white rounded-lg p-3 shadow-lg border">
-                <div className="flex items-center gap-2 mb-1">
-                  <div className="flex -space-x-1">
-                    <Avatar
-                      width={37.46}
-                      height={37.46}
-                      alt="Profile"
-                      className="rounded-full"
-                      backgroundColor="bg-teal-100"
-                      textColor="text-teal-600"
-                      src="https://i.pravatar.cc/150?img=60"
-                    />
-                    <Avatar
-                      width={37.46}
-                      height={37.46}
-                      alt="Profile"
-                      className="rounded-full"
-                      backgroundColor="bg-teal-100"
-                      textColor="text-teal-600"
-                      src="https://i.pravatar.cc/150?img=10"
-                    />
-                    <Avatar
-                      width={37.46}
-                      height={37.46}
-                      alt="Profile"
-                      className="rounded-full"
-                      backgroundColor="bg-teal-100"
-                      textColor="text-teal-600"
-                      src="https://i.pravatar.cc/150?img=30"
-                    />
-                    <Avatar
-                      width={37.46}
-                      height={37.46}
-                      alt="Profile"
-                      className="rounded-full"
-                      backgroundColor="bg-teal-100"
-                      textColor="text-teal-600"
-                      src="https://i.pravatar.cc/150?img=35"
-                    />
-                  </div>
-                  <span className="text-xl font-bold text-neutral-900 flex items-center">
-                    1400
-                    <span className="text-brand text-xl">+</span>
-                  </span>
-                </div>
-                <div className="text-brand font-bold py-1">Happy Customers</div>
-                <Rating value={4.5} />
-              </div>
+              <FloatingRatingCard />
             </div>
           </div>
         </div>
