@@ -8,7 +8,7 @@ interface NearbyClinicCardProps {
 
 export default function NearbyClinicCard({ clinic }: NearbyClinicCardProps) {
   return (
-    <div className="shrink-0 w-44 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+    <div className="shrink-0 w-58 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
       <div className="relative w-full h-28">
         <Image
           src={clinic.image}
@@ -30,8 +30,12 @@ export default function NearbyClinicCard({ clinic }: NearbyClinicCardProps) {
 
         <div className="flex items-center space-x-1 mb-1.5">
           <span className="text-yellow-400 text-xs">★</span>
-          <span className="text-xs font-semibold text-gray-700">{clinic.rating}</span>
-          <span className="text-xs text-gray-400">({clinic.reviews} Reviews)</span>
+          <span className="text-xs font-semibold text-gray-700">
+            {clinic.rating}
+          </span>
+          <span className="text-xs text-gray-400">
+            ({clinic.reviews} Reviews)
+          </span>
         </div>
 
         <div className="flex items-center justify-between text-xs text-gray-400">
