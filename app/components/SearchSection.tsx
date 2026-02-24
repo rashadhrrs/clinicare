@@ -88,25 +88,85 @@ export default function SearchSection() {
   };
 
   return (
-    <section className="bg-white py-16">
-      <div className="px-24">
-        <div className="text-left mb-12 border-2 p-10 rounded-[28px] border-brand">
-          <h2 className="text-3xl font-bold text-brand mb-8">
-            Cari Klinik Pilihan Anda
-          </h2>
-
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="w-5 h-5 text-[#BFBABA]" />
-            </div>
-            <input
-              type="text"
-              placeholder="Cari klinik..."
-              value={searchQuery}
-              onChange={handleSearchChange}
-              className="w-full pl-10 pr-4 text-neutral-900 py-4 border border-[#A6A3A3] rounded-xl text-lg focus:border-brand focus:outline-none transition-colors"
-            />
+    <section>
+      {/* ── MOBILE search bar ── */}
+      <div className="md:hidden bg-gray-50 px-4 py-3">
+        <div className="relative">
+          <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+            <Search className="w-4 h-4 text-gray-400" />
           </div>
+          <input
+            type="text"
+            placeholder="Cari klinik..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="w-full pl-9 pr-4 py-3 bg-white border border-gray-200 rounded-xl text-sm text-neutral-900 focus:border-teal-500 focus:outline-none transition-colors shadow-sm"
+          />
+        </div>
+
+        {/* Mobile search results */}
+        {searchQuery && (
+          <div className="mt-3">
+            {loading && (
+              <div className="flex justify-center py-4">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-teal-500"></div>
+              </div>
+            )}
+            {!loading && filteredAndSortedClinics.length > 0 && (
+              <div className="space-y-3">
+                {filteredAndSortedClinics.map((clinic) => (
+                  <div
+                    key={clinic.id}
+                    onClick={() => router.push(`/clinic/${clinic.id}`)}
+                    className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-xl cursor-pointer hover:border-teal-400 transition-colors"
+                  >
+                    <Image
+                      width={60}
+                      height={60}
+                      alt={clinic.name}
+                      className="rounded-lg object-cover shrink-0"
+                      src="/images/hospital_main.jpg"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-800 text-sm truncate">{clinic.name}</h4>
+                      <p className="text-xs text-gray-500 truncate">{clinic.address}</p>
+                      <div className="flex items-center mt-1 space-x-1">
+                        <StarIcon className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                        <span className="text-xs text-gray-600">{clinic.rating}</span>
+                        <span className="text-xs text-gray-400">({clinic.totalReviews})</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {!loading && searchQuery && filteredAndSortedClinics.length === 0 && (
+              <p className="text-sm text-gray-500 text-center py-4">Tidak ada klinik ditemukan</p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* ── DESKTOP search box ── */}
+      <div className="hidden md:block bg-white py-16">
+        <div className="px-24">
+          <div className="text-left mb-12 border-2 p-10 rounded-[28px] border-brand">
+            <h2 className="text-3xl font-bold text-brand mb-8">
+              Cari Klinik Pilihan Anda
+            </h2>
+
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Search className="w-5 h-5 text-[#BFBABA]" />
+              </div>
+              <input
+                type="text"
+                placeholder="Cari klinik..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                className="w-full pl-10 pr-4 text-neutral-900 py-4 border border-[#A6A3A3] rounded-xl text-lg focus:border-brand focus:outline-none transition-colors"
+              />
+            </div>
 
           {/* Search Results */}
           {searchQuery && (
@@ -232,6 +292,8 @@ export default function SearchSection() {
             </div>
           )}
         </div>
+        </div>
+
       </div>
     </section>
   );

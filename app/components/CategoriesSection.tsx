@@ -13,9 +13,9 @@ export default function CategoriesSection() {
   ];
 
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-white py-4 md:bg-gray-50 md:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="hidden md:block text-center mb-12">
           <h2 className="text-5xl font-bold text-neutral-900 mb-2">
             Kategori <span className="text-brand">Klinik</span>
           </h2>
@@ -44,22 +44,28 @@ export default function CategoriesSection() {
 
         {/* Mobile Horizontal Scroll */}
         <div className="md:hidden">
-          <div className="flex space-x-4 overflow-x-auto pb-4">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-lg font-bold text-gray-800">Jenis Klinik</h2>
+            <a href="#" className="text-teal-500 text-sm font-medium">
+              Lihat semua
+            </a>
+          </div>
+          <div className="flex space-x-4 overflow-x-auto pb-2">
             {categories.slice(0, 5).map((category, index) => (
               <div
                 key={`${category.name}-mobile-${index}`}
-                className="shrink-0 bg-white rounded-2xl p-4 text-center shadow-sm"
+                className="shrink-0 flex flex-col items-center"
               >
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-2">
                   <Image
                     src={category.icon}
                     alt={category.name}
-                    width={5}
-                    height={5}
+                    width={28}
+                    height={28}
                     className="object-contain"
                   />
                 </div>
-                <h3 className="text-xs font-medium text-gray-700 whitespace-nowrap">
+                <h3 className="text-xs font-medium text-teal-600 whitespace-nowrap">
                   {category.name}
                 </h3>
               </div>
