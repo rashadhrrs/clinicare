@@ -16,7 +16,8 @@ export default function Button({
     "font-medium rounded-lg transition-colors focus:outline-none focus:ring-2";
 
   const variantClasses = {
-    primary: "bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-300",
+    primary:
+      "bg-brand cursor-pointer text-white hover:bg-teal-600 focus:ring-teal-300",
     secondary:
       "bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-gray-300",
     outline:
